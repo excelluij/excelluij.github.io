@@ -1,0 +1,11 @@
+/* Cambiar el color de "Páginas" a rojo al hacer hover en "Red de blogs" o "Detalles del blog" */
+.dropdown-menu a#red-de-blogs-link:hover ~ .nav-link.dropdown-toggle,
+.dropdown-menu a#detalles-del-blog-link:hover ~ .nav-link.dropdown-toggle {
+    color: red !important;
+}
+
+/* Mantener el color rojo en "Páginas" después del clic en "Red de blogs" o "Detalles del blog" */
+.dropdown-menu a#red-de-blogs-link:focus ~ .nav-link.dropdown-toggle,
+.dropdown-menu a#detalles-del-blog-link:focus ~ .nav-link.dropdown-toggle {
+    color: red !important;
+}
