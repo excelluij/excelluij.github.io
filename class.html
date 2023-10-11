@@ -24,38 +24,36 @@
 </head>
 
 <body class="bg-white">
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
-        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="" class="navbar-brand">
-                <img src="img/logo.png" alt="Logo Fitness Fusion" class="logo-img">
-            </a>
-            <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">Fitness Fusion</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4 bg-secondary">
-                    <a href="index.html" class="nav-item nav-link active" style="color: inherit;">Inicio</a>
-                    <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
-                    <a href="feature.html" class="nav-item nav-link">Características</a>
-                    <a href="class.html" class="nav-item nav-link" style="color: red;">Clases</a>
-                    <div class="nav-item dropdown">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Páginas</a>
-                            <div class="dropdown-menu text-capitalize">
-                                <a href="blog.html" id="red-de-blogs-link" class="dropdown-item">Red de blogs</a>
-                                <a href="single.html" id="detalles-del-blog-link" class="dropdown-item">Detalles del blog</a>
-                            </div>
-                        </div>
+<!-- Navbar Start -->
+<div class="container-fluid p-0 nav-bar">
+    <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+        <a href="" class="navbar-brand">
+            <img src="img/logo.png" alt="Logo Fitness Fusion" class="logo-img">
+        </a>
+        <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">Fitness Fusion</h1>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto p-4 bg-secondary">
+              <a href="index.html" class="nav-item nav-link active" style="color: white;">Inicio</a>
+                <a href="about.html" class="nav-item nav-link" id="about-link">Sobre nosotros</a>
+                <a href="feature.html" class="nav-item nav-link">Características</a>
+                <a href="class.html" class="nav-item nav-link" style="color: red;">Clases</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Páginas</a>
+                    <div class="dropdown-menu text-capitalize">
+                        <a href="blog.html" class="dropdown-item">Red de blogs</a>
+                        <a href="single.html" class="dropdown-item">Detalles del blog</a>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
                 </div>
+                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                <a href="video.html" class="nav-item nav-link">Página web</a>
             </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
     <script>
         // Capturar clics en Red de blogs o Detalles del blog para marcar Páginas como activo
         document.getElementById('red-de-blogs-link').addEventListener('click', function () {
