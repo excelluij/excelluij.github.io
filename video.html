@@ -7,25 +7,55 @@
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
-    <!-- Flaticon Font -->
     <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                display: none;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-toggler:hover,
+            .navbar-toggler:focus {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .navbar-toggler:active {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .navbar-toggler-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $('.navbar-toggler').on('click', function() {
+                $('.navbar-collapse').toggle('collapse');
+            });
+        });
+    </script>
 </head>
 
 <body class="bg-white">
-<!-- Navbar Start -->
 <div class="container-fluid p-0 nav-bar">
-    <div class="container-fluid p-0 nav-bar">
-        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="" class="navbar-brand">
+    <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+        <a href="" class="navbar-brand">
             <img src="img/logo.png" alt="Logo Fitness Fusion" class="logo-img">
         </a>
         <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">Fitness Fusion</h1>
@@ -46,7 +76,7 @@
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                <a href="video.html" class="nav-item nav-link"  style="color: red;">Página web</a>
+                <a href="video.html" class="nav-item nav-link" style="color: red;">Página web</a>
             </div>
         </div>
     </nav>
@@ -66,12 +96,44 @@
 
   <!-- Video Start -->
 
-    <video width="100%" controls>
-      <source src="https://youtu.be/T9A8yBhnr38" type="video/mp4">
-      Tu navegador no soporta el elemento de video. 
-    </video>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/T9A8yBhnr38" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="1400" height="900"></iframe>
+</div>
+<div class="video-android">
+    <iframe src="https://www.youtube.com/embed/T9A8yBhnr38" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="auto" height="auto"></iframe>
+</div>
+<style>
+    .video-container {
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
+      margin: 0 auto;
+    }
+    
+    .video-android {
+      width: 100%;
+      max-width: 1080px;
+      height: auto;
+      margin: 0 auto;
+    }
+  </style>
+  <style>
+    /* Código CSS para ocultar el video pequeño en PC o dispositivos grandes */
+    @media (min-width: 992px) {
+      .video-android {
+        display: none;
+      }
+    }
 
-    <p class="mt-3">
+    /* Código CSS para ocultar el video grande en dispositivos móviles o cualquier celular */
+    @media (max-width: 991px) {
+      .video-container {
+        display: none;
+      }
+    }
+</style>
+
+   <p class="mt-3">
       Aquí hay un video que muestra el proceso de cómo se desarrolló y diseñó esta página web para el gimnasio Fitness Fusion.
     </p>
   </div>
@@ -130,9 +192,6 @@
       </div>
   </div>
   <!-- Footer End -->
-
-      <!-- Back to Top -->
-      <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 </body>
 </html>
