@@ -420,33 +420,34 @@
                                         </div>
                                         
                                         <script>
-                                            function calcularIMC() {
-                                                const peso = parseFloat(document.querySelector('input[placeholder="Peso (KG)"]').value);
-                                                const altura = parseFloat(document.querySelector('input[placeholder="Altura (CM)"]').value) / 100;
-                                                const imc = peso / (altura * altura);
-                                                const resultadoIMC = document.getElementById('result');
-                                                const mensajeIMC = document.getElementById('mensaje-imc');
-                                        
-                                                if (!isNaN(imc)) {
-                                                    resultadoIMC.innerText = imc.toFixed(2);
-                                        
-                                                    if (imc < 18.5) {
-                                                        mensajeIMC.innerText = 'Peso bajo (Delgadez)';
-                                                    } else if (imc < 24.9) {
-                                                        mensajeIMC.innerText = 'Peso normal';
-                                                    } else if (imc < 29.9) {
-                                                        mensajeIMC.innerText = 'Sobrepeso';
-                                                    } else {
-                                                        mensajeIMC.innerText = 'Obesidad';
-                                                    }
-                                                } else {
-                                                    resultadoIMC.innerText = '';
-                                                    mensajeIMC.innerText = 'Ingrese valores válidos.';
-                                                }
-                                            }
-                                        
-                                            const btnCalcular = document.querySelector('.btn-dark');
-                                            btnCalcular.addEventListener('click', calcularIMC);
+function calcularIMC() {
+  const peso = parseFloat(document.querySelector('input[placeholder="Peso (KG)"]').value);
+  const altura = parseFloat(document.querySelector('input[placeholder="Altura (CM)"]').value) / 100;
+  const imc = peso / (altura * altura);
+  const resultadoIMC = document.getElementById('result');
+  const mensajeIMC = document.getElementById('mensaje-imc');
+
+  if (!isNaN(imc)) {
+    resultadoIMC.innerText = imc.toFixed(2);
+
+    if (imc < 18.5) {
+      mensajeIMC.innerText = 'Peso bajo (Delgadez)';
+    } else if (imc < 24.9) {
+      mensajeIMC.innerText = 'Peso normal';
+    } else if (imc < 29.9) {
+      mensajeIMC.innerText = 'Sobrepeso';
+    } else {
+      mensajeIMC.innerText = 'Obesidad';
+    }
+  } else {
+    resultadoIMC.innerText = '';
+    mensajeIMC.innerText = 'Ingrese valores válidos.';
+  }
+}
+
+const btnCalcular = document.querySelector('.btn-dark');
+btnCalcular.addEventListener('click', calcularIMC);
+
                                         </script>
                                                                          
                                 </div>
